@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  title = 'Morder Three Systems';
+  title = 'Three Mordern Systems';
 }
