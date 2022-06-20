@@ -1,0 +1,51 @@
+<div class="content" role="main">
+<form [formGroup]="signUpForm" class="modal-content" method="post">
+    <div class="imgcontainer">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==" alt="Avatar" class="avatar">
+    </div>
+    <div class="container">
+        <label>
+            {{first_name}}
+        <input type="text" required placeholder="Enter Firstname" [(ngModel)]="first_name" formControlName="firstname" > 
+        <span class="error" *ngIf=" firstname && firstname.invalid && firstname.touched" >Firstname is required</span>
+        </label>
+
+        <label>
+        <input type="text" required placeholder="Enter Lastname" [(ngModel)]="last_name" formControlName="lastname" >
+        <span class="error" *ngIf="lastname && lastname.invalid && lastname.touched" >Lastname is required</span>
+        </label>
+
+        <label>
+        <input type="email" required placeholder="Enter Email" [(ngModel)]="mail" formControlName="email" >
+        <span class="error" *ngIf="email && email.invalid && email.touched" >Email is invalid</span>
+        </label>
+
+        <label>
+        <input type="password"  required  placeholder="Enter Password"  [(ngModel)]="psw" formControlName="password" >
+        <span class="error" *ngIf="password && password.invalid && password.touched">Password is required</span>
+        </label>
+
+        <label>
+        <input type="password" required  placeholder="Confirm Password" name="con_psw"[(ngModel)]="con_password" formControlName="confirm_psw" required>
+        <span class="error"  *ngIf="confirm_psw && confirm_psw.invalid && confirm_psw.touched">Confirm the password</span>
+        </label>
+      
+        
+
+    <div class="separator">
+        <span style=" background-color: white; position: relative; top: -0.8em">
+            <a routerLink="/login">Already have an account?</a>
+        </span>
+    </div>
+    <button type="submit" [disabled]="signUpForm.invalid" [routerLink]="signUpForm.valid? ['/admin/dashboard']: []">Create Account</button>
+    
+    </div>
+    <div class="container" style="background-color:#d6cccc">
+        <div class="wrapper">
+        <span>Or Sign up With</span>
+        <i class='bx bxl-google-plus-circle' style='color:#ad2424'></i>
+        <i class='bx bxl-facebook-circle' style='color:#242aad' ></i>
+        </div>
+    </div>
+</form>
+</div>

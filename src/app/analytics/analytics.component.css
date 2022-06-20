@@ -1,0 +1,32 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    gap: 15px 15px;
+    width: calc(100%-240px)
+}
+
+.grid-item {
+    font-size: 30px;
+    text-align: center;
+  
+}
+
+.grid-item:nth-last-of-type(3){
+    max-width: 360px;
+}
+
+.wider{
+   grid-row: auto/span 2;
+   grid-column:auto/span 2;
+}
+
+@media  (max-width:1240px) {
+    .grid-container{
+       grid-template-columns: 1fr;
+    }
+    .wider{
+        grid-row: auto/span 1;
+        grid-column:auto/span 1;
+    }
+}

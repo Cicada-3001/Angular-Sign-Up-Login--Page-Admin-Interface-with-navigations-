@@ -1,0 +1,40 @@
+  .toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #0A2558;
+    color: white;
+    font-weight: bold;
+    z-index: 2;
+  }
+  .toolbar span{
+    font-size: larger;
+    opacity: 0.7;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .toolbar img {
+    margin: 0 16px;
+  }
+
+  .toolbar #twitter-logo {
+    height: 30px;
+    margin: 0 8px;
+  }
+
+::ng-deep * {
+    margin: 0;
+    padding: 0;
+}
+
+/* Responsive Styles */
+  @media screen and (max-width: 767px) {
+   
+
+  
+}
+

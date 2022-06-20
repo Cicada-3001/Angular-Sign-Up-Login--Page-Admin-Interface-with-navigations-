@@ -1,1 +1,133 @@
-/* You can add global styles to this file, and also import other style files */
+/*global styles used by more than one component*/
+
+body{
+    background-color: rgb(247, 242, 242);
+    padding: 0;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 1% auto 15% auto;
+    width: 90%;
+    color: blue;
+    border-radius: 3px;
+    box-shadow: 2px 2px 2px 2px whitesmoke;
+}
+
+.content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 60px;
+    margin-top: 20px;
+    min-height: calc(100vh-60);
+    width: 100vw;
+}
+
+.separator{
+    height: 2px;
+    background-color: rgb(24, 23, 23); 
+    text-align: center;
+    margin:20px;
+}
+
+.separator a{
+    color: #0A2558;
+}
+
+
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 600px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .modal-content{
+        width:95%;
+    }
+}
+
+.error{
+    color: rgb(235, 18, 18);
+    font-size: 12px;
+    margin: 0;
+}
+
+input[type=text], input[type=password], input[type=email]{
+    width: 100%;
+    padding: 12px 20px;
+    display: inline-block;
+    border: none;
+    box-sizing: border-box;
+    background-color: rgb(212, 225, 228);
+    border-radius: 3px;
+    outline: none;
+}   
+
+img.avatar {
+    width: 70px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color:#0040ff;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    position: relative;
+    top: -2em;
+}
+    
+.container {
+    padding: 16px;
+}
+
+a{
+    text-decoration: none;
+}
+
+table{
+    background-color: white;
+}
+
+table i{
+  margin: 0 10px;
+  font-size: 20px;
+  cursor:pointer;
+}
+
+.upper-section{
+    margin: 0 0 15px 0;
+    border-radius: 15px;
+    padding: 3px 10px;
+    float: right;
+    width: fit-content;
+    background-color: #0A2558;
+    opacity: 0.8;
+    color: white;
+    cursor: pointer;
+
+}
+
+.myChart{
+    background-color: white;
+}
+

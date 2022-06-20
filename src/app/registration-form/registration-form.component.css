@@ -1,0 +1,39 @@
+input:first-of-type{
+    margin-top: 0;
+}
+
+.container label{
+  margin: 10px 0;
+  display: inline-block;
+  width: 100%;
+}
+
+.wrapper{
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  width: 100%;
+  color:rgb(24, 23, 23);
+  background-color:rgb(195, 190, 190) ;
+  
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+.modal-content {
+  width: 40%;
+  max-width: 900px;
+}
+
+.container i{
+  padding: 10px;
+  border-radius: 50px;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+
+

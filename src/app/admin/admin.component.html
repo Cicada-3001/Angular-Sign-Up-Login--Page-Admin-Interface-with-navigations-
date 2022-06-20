@@ -1,0 +1,76 @@
+<div class="sidebar">
+    <div class="profile-wrapper">
+    <img [src]="imgUrl"/>
+    <span>Barrack Obama</span><br>
+    <span>Manager</span>
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a routerLink="dashboard" routerLinkActive="active" >
+          <i class='bx bxs-dashboard'></i>
+          <span class="links_name">Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="analytics" routerLinkActive="active">
+          <i class='bx bx-stats'></i>
+          <span class="links_name">Analytics</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="members"  routerLinkActive="active">
+          <i class='bx bxs-group'></i>
+          <span class="links_name">Members</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="products" routerLinkActive="active">
+          <i class='bx bx-box' ></i>
+          <span class="links_name">Products</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="sales" routerLinkActive="active">
+          <i class='bx bx-coin-stack' ></i>
+          <span class="links_name">Sales History</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="messages" routerLinkActive="active">
+          <i class='bx bx-message' ></i>
+          <span class="links_name">Messages</span>
+        </a>
+      </li>
+      <li>
+        <a routerLinkActive="active" (click)="showSuppliers()">
+          <i class='bx bx-user' ></i>
+          <span class="links_name">Suppliers</span>
+        </a>
+      </li>
+      <li>
+        <a  routerLinkActive="active" (click)="showSettings()">
+          <i class='bx bx-cog' ></i>
+          <span class="links_name">Settings</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/login" routerLinkActive="active">
+          <i class='bx bx-log-out'></i>
+          <span class="links_name">Log out</span>
+        </a>
+      </li>
+    </ul>
+</div>
+
+<section class="home-section">
+    <nav>
+      <div class="search-box">
+        <input type="text" [(ngModel)]="query" placeholder="Search...">
+        <i class='bx bx-search' [routerLink]="query.length?['/admin/search']:[]"></i>
+      </div>
+    </nav>
+    <div class="home-content">
+      <router-outlet></router-outlet>
+    </div>
+</section>
+

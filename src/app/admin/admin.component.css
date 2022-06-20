@@ -1,0 +1,194 @@
+
+.sidebar{
+    width:240px;
+    padding-top: 10px;
+    height: 100%;
+    background: #0A2558;
+    min-height:100vh;
+    position: fixed;
+}
+
+.profile-wrapper{
+  margin-bottom: 25px;
+  margin-left: 20px;
+  height: 50px;
+  color: white;
+}
+
+.profile-wrapper span:last-child{
+  opacity: 0.8;
+  font-size: 13px;
+}
+
+.sidebar img{
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  float: left;
+  margin-right: 15px;
+}
+
+.sidebar .nav-links{
+    margin-top: 10px;
+}
+    
+a{
+     color: white;
+}
+
+
+.sidebar .nav-links li{
+    position: relative;
+    list-style: none;
+    height: 50px;
+}
+  
+.sidebar .nav-links li a{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: centre;
+    text-decoration: none;
+}
+  
+.sidebar .nav-links li a.active{
+    background: #143f8e;
+}
+  
+.sidebar .nav-links li a:hover{
+    background: #081D45;
+}
+  
+.sidebar .nav-links li i{
+    min-width: 60px;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+}
+  
+.links_name{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.home-section{
+    position: relative;
+    min-height: 100vh;
+    width: calc(100% - 240px);
+    margin-top:60px;
+    left: 240px;
+}
+  
+.sidebar.active ~ .home-section{
+    width: calc(100% - 60px);
+    left: 60px;
+ }
+  
+/************** content-section nav**************/
+.home-section nav{
+    display: flex;
+    height: 80px;
+    background-color: white;
+    width:100%;
+    align-items: center;
+    position: fixed;
+    position: absolute;
+    z-index: 4;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.home-section nav .sidebar-button{
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 500;
+}
+  
+  
+  
+nav .sidebar-button i{
+    font-size: 35px;
+    margin-right: 10px;
+  }
+  
+nav .search-box input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: 1px solid #EFEEF1;
+    border-radius: 5px;
+    font-size: 15px;  
+}
+  
+.home-section nav .search-box{
+    position: relative;
+    height: 38px;
+    max-width: 550px;
+    width: 100%;
+    left: 20px;
+}
+
+
+
+.profile i{
+  display: inline-block;
+}
+
+.profile div{
+  display: inline-block;
+}
+
+.search-box .bx-search{
+    position: absolute;
+    height: 100%;
+    width: 40px;
+    background:#0A2558;;
+    right: -0.5px;
+    top:0;
+    line-height: 38px;
+    border-radius: 0px 4px 4px 0;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    opacity:0.8;
+    cursor:pointer;
+    transition: all 0.4 ease;
+  }
+
+  .home-section .home-content{
+    position: relative;
+    padding-top: 82px;
+    font-family:  Helvetica;
+  }
+
+
+
+  /* Responsive Media Query */
+@media (max-width: 1240px) {
+    .sidebar{
+      width: 60px;
+    }
+    .sidebar.active{
+      width: 220px;
+    }
+    .home-section{
+      width: calc(100% - 60px);
+      left: 60px;
+    }
+    .sidebar.active ~ .home-section{
+      /* width: calc(100% - 220px); */
+      overflow: hidden;
+      left: 220px;
+    }
+    
+    .sidebar.active ~ .home-section nav{
+      width: calc(100% - 220px);
+      left: 220px;
+    }
+
+  }
+
+  
